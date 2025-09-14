@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Week 7 — CSS Animations & JS Functions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>🎬 Bringing Web Pages to Life</h1>
+    <p class="subtitle">Part 1: CSS Animations · Part 2: JS Functions (scope/params/return) · Part 3: JS-triggered
+      animations</p>
+  </header>
+
+  <!-- PART 1 -->
+  <section id="part1" class="panel">
+    <div class="panel-title"><span class="badge">Part 1</span> CSS Transitions & Keyframe Animations</div>
+
+    <div class="example-row">
+      <div class="card">
+        <h3>Hover Button (transition)</h3>
+        <button class="hover-btn" aria-label="Hover example">Hover Me</button>
+      </div>
+
+      <div class="card">
+        <h3>Continuous Animation (keyframes)</h3>
+        <div class="animated-box" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 2 -->
+  <section id="part2" class="panel">
+    <div class="panel-title"><span class="badge">Part 2</span> JavaScript Functions — scope, parameters & return</div>
+
+    <div class="example-row">
+      <div class="card">
+        <h3>Function Controls (change color & size)</h3>
+
+        <div id="funcBox" class="control-box">I am the function-controlled box</div>
+
+        <div class="controls">
+          <button id="colorBtn">Change Background</button>
+          <button id="growBtn">Increase Size</button>
+          <button id="resetFuncBtn">Reset Box</button>
+        </div>
+
+        <div class="output">
+          <strong>Returns / Logs:</strong>
+          <pre id="funcOutput" class="log">(function output appears here)</pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Small Demo: parameters & return</h3>
+        <p>Example use of a function that returns a value:</p>
+        <button id="sumBtn">Compute 5 + 7</button>
+        <div class="output">
+          <strong>Result:</strong>
+          <pre id="sumOut" class="log">—</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 3 -->
+  <section id="part3" class="panel">
+    <div class="panel-title"><span class="badge">Part 3</span> Triggering CSS Animations from JavaScript</div>
+
+    <div class="example-row">
+      <div class="card">
+        <h3>JS-triggered animation</h3>
+        <div id="jsBox" class="js-box" aria-hidden="true"></div>
+        <div class="controls">
+          <button id="animateBtn">Animate the Box</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+        <p class="hint">JS adds/removes a class to trigger the <code>@keyframes</code> animation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Notes 📝</h3>
+        <ul>
+          <li>Part 1 uses CSS-only transitions & keyframes.</li>
+          <li>Part 2 provides <code>changeBackground</code> and <code>setBoxSize</code> (both return values).</li>
+          <li>Part 3 triggers animations by toggling the <code>move</code> class.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
